@@ -1,9 +1,16 @@
 # CineView
-[![Live](https://img.shields.io/badge/demo-GitHub%20Pages-blue)](https://blaszczakdev.github.io/cine-view/)
-![License](https://img.shields.io/badge/license-MIT-green)
-![Last commit](https://img.shields.io/github/last-commit/blaszczakdev/cine-view)
-![Repo size](https://img.shields.io/github/repo-size/blaszczakdev/cine-view)
 
+<p align="center">
+  <a href="https://blaszczakdev.github.io/cine-view/">
+    <img alt="Live demo" src="https://img.shields.io/badge/Live%20demo-Open-3D7BFD" />
+  </a>
+  &nbsp;&nbsp;
+  <img alt="Vanilla JS" src="https://img.shields.io/badge/HTML%2FCSS%2FJS-Vanilla-informational" />
+  &nbsp;
+  <img alt="TVMaze API" src="https://img.shields.io/badge/API-TVMaze-blue" />
+  &nbsp;
+  <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-green" />
+</p>
 
 A small, responsive TV show browser built with **vanilla HTML/CSS/JS** and the public **TVMaze** API.  
 You can search shows, open a details modal, add/remove **favourites** (saved in `localStorage`), and view the broadcast **schedule** for a selected date across multiple countries.
