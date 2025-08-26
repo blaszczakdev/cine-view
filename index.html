@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>CineView</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark light" />
+    <meta
+      name="description"
+      content="CineView — browse top-rated TV shows, search titles, see schedules and manage your favourites."
+    />
+    <meta name="theme-color" content="#0f1116" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://api.tvmaze.com" crossorigin />
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="css/tablet.css"
+      media="(min-width: 600px) and (max-width: 1023px)"
+    />
+    <link
+      rel="stylesheet"
+      href="css/laptop.css"
+      media="(min-width: 1024px) and (max-width: 1439px)"
+    />
+    <link rel="stylesheet" href="css/desktop.css" media="(min-width: 1440px)" />
+  </head>
+  <body>
+    <header class="header">
+      <button id="logo" class="logo" aria-label="Go to home" type="button">
+        CineView
+      </button>
+
+      <form id="searchForm" class="search-bar" role="search">
+        <input
+          id="searchInput"
+          type="search"
+          placeholder="Search shows…"
+          autocomplete="off"
+          aria-label="Search shows"
+          aria-haspopup="listbox"
+          aria-expanded="false"
+          aria-controls="suggestions"
+        />
+        <button id="searchBtn" class="button" aria-label="Search" type="submit">
+          Search
+        </button>
+        <div
+          id="suggestions"
+          class="suggestions"
+          role="listbox"
+          aria-label="Suggestions"
+        ></div>
+      </form>
+
+      <div class="header-actions">
+        <button
+          class="button secondary"
+          data-role="fav-toggle"
+          aria-pressed="false"
+          type="button"
+        >
+          Favourites
+        </button>
+        <button
+          id="scheduleBtn"
+          class="button secondary"
+          aria-label="Open today’s schedule"
+          type="button"
+        >
+          Schedule
+        </button>
+      </div>
+    </header>
+
+    <h1 class="visually-hidden">CineView — TV shows catalogue</h1>
+
+    <div id="scheduleBar" class="schedule-bar" hidden>
+      <span id="scheduleInfo"></span>
+      <div class="bar-actions">
+        <button id="editScheduleBtn" class="button tertiary" type="button">
+          Change date
+        </button>
+      </div>
+    </div>
+
+    <main>
+      <section id="home" class="home">
+        <h2>What to watch next</h2>
+        <p>
+          Browse top rated shows, search by title, open details, track your
+          favourites, and check the schedule.
+        </p>
+        <button id="exploreBtn" class="button" type="button">Explore</button>
+
+        <h3 class="section-title">Top rated</h3>
+        <div id="teasers" class="teasers-wrapper"></div>
+        <div id="teasersControls" class="teasers-controls"></div>
+      </section>
+
+      <section aria-live="polite">
+        <div id="showsWrapper" class="shows-wrapper"></div>
+      </section>
+    </main>
+
+    <div id="overlay" class="overlay" aria-hidden="true"></div>
+
+    <div
+      id="showPreview"
+      class="show-preview"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+    ></div>
+
+    <div id="sheetBackdrop" class="sheet-backdrop" aria-hidden="true"></div>
+    <aside
+      id="scheduleSheet"
+      class="bottom-sheet"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+    >
+      <div class="sheet-header">
+        <h3 id="sheetTitle">Pick a date</h3>
+        <button id="sheetClose" class="button tertiary" type="button">
+          Close
+        </button>
+      </div>
+      <div class="sheet-body">
+        <label class="field">
+          <span>Date</span>
+          <input id="dateInput" type="date" inputmode="none" />
+        </label>
+      </div>
+      <div class="sheet-footer">
+        <button id="sheetCancel" class="button secondary" type="button">
+          Cancel
+        </button>
+        <button id="sheetApply" class="button" type="button">Apply</button>
+      </div>
+    </aside>
+
+    <script type="module" src="src/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+.header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-column-gap: 1.25rem;
+  align-items: center;
+  padding: 1.1rem 2rem;
+}
+
+.logo {
+  justify-self: start;
+  font-size: 1.45rem;
+}
+
+.search-bar {
+  max-width: 700px;
+  justify-self: center;
+}
+
+.header-actions {
+  justify-self: end;
+  gap: 1rem;
+}
+
+#searchInput {
+  padding: 0.7rem 1rem;
+  max-width: 600px;
+}
+
+.home,
+main > section {
+  padding: 2rem;
+  max-width: 1400px;
+  margin-inline: auto;
+}
+
+.section-title {
+  font-size: 1.8rem;
+}
+
+.teasers-wrapper {
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.25rem;
+}
+
+.shows-wrapper {
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.show-preview {
+  width: 74%;
+  max-width: 1200px;
+  max-height: 92vh;
+}
+.card-preview-bg {
+  height: 300px;
+}
+.preview-header {
+  padding: 1.1rem 1.5rem;
+}
+.preview-body {
+  padding: 0 1.5rem 1.5rem;
+}
+
+.pagination {
+  gap: 0.8rem;
+}
+.pagination-controls {
+  gap: 1.2rem;
+}
+.pagination-controls .button {
+  font-size: 0.85rem;
+  padding: 0.4rem 0.7rem;
+}
+.page-indicator {
+  min-width: 110px;
+  text-align: center;
+}
